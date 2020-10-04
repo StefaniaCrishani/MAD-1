@@ -522,9 +522,10 @@
 
     <ImageButton
         android:id="@+id/AddProduct"
-        android:layout_width="46dp"
-        android:layout_height="37dp"
+        android:layout_width="70dp"
+        android:layout_height="62dp"
         android:onClick="AddProduct"
+        android:background="@drawable/add_foreground"
         android:tint="#090909"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -532,6 +533,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.982"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@android:drawable/ic_menu_add" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
