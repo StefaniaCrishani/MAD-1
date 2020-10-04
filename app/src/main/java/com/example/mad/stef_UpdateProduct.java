@@ -42,7 +42,7 @@ public class stef_UpdateProduct extends AppCompatActivity {
         bupdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseReference updRef = FirebaseDatabase.getInstance().getReference().child("Student");
+                DatabaseReference updRef = FirebaseDatabase.getInstance().getReference().child("Product");
                 updRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -54,7 +54,7 @@ public class stef_UpdateProduct extends AppCompatActivity {
                                 prd.setPrice(Integer.parseInt(txtprice.getText().toString().trim()));
                                 prd.setColors(txtcolors.getText().toString().trim());
 
-                                dbRef = FirebaseDatabase.getInstance().getReference().child("Student").child("std1");
+                                dbRef = FirebaseDatabase.getInstance().getReference().child("Product").child("prd1");
                                 dbRef.setValue(prd);
                                 //clearControls();
                                 Toast.makeText(getApplicationContext(), "Data Updated Successfully", Toast.LENGTH_SHORT).show();
@@ -80,7 +80,7 @@ public class stef_UpdateProduct extends AppCompatActivity {
         bdelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseReference updRef = FirebaseDatabase.getInstance().getReference().child("Student");
+                DatabaseReference updRef = FirebaseDatabase.getInstance().getReference().child("Proudct");
                 updRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
